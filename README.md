@@ -8,8 +8,8 @@
   * import itertools 
   * import py_eval_terrier
 
-** Download Corpus Data **
-  https://ota.bodleian.ox.ac.uk/repository/xmlui/handle/20.500.12024/0643?show=full
+**Download Corpus Data**
+  - https://ota.bodleian.ox.ac.uk/repository/xmlui/handle/20.500.12024/0643?show=full
 
 
 
