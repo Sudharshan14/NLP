@@ -1,5 +1,5 @@
 # NLP
-** Install and import Required Libiraries **
+**Install and import Required Libiraries**
   * pip install nltk multiprocessing time os itertools py_eval_terrier
   * import nltk 
   * import multiprocessing 
