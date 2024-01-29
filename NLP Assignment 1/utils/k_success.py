@@ -1,6 +1,6 @@
 import nltk
 import re
-import pytrec_eval as pt
+import pytrec_eval as pe
 from operator import itemgetter
 from nltk.corpus import wordnet as wn
 from utils.min_edit_distance import med_function
@@ -8,13 +8,13 @@ from utils.min_edit_distance import med_function
 # function to return top-k most similar, least distant list of tokens
 def top_k_words(data_row):
     words_in_wn = wn.words(lang='eng')
-    cor_word = data_row[0].lower()
-    incor_word = data_row[1].lower()
-    wn_result = {'correct_word':cor_word, 'incorrect_word':incor_word}
+    c_word = data_row[0].lower()
+    ic_word = data_row[1].lower()
+    wn_result = {'correct_word':c_word, 'incorrect_word':ic_word}
     words_dict = {}
     for word in words_in_wn:
         if re.match("^[a-zA-Z]+$", word):
-            edit_distance = med_function(incor_word, word, False)
+            edit_distance = med_function(ic_word, word, False)
             words_dict[word] = edit_distance
         
     words_dict = dict(sorted(words_dict.items(), key=lambda item: item[1]))
@@ -57,7 +57,6 @@ def success_at_k(top_k_result):
 def average_k(success_dict):
     average_dict = {}
     for k_success in success_dict[list(success_dict.keys())[0]].keys():
-        average_dict[k_success] = pt.compute_aggregated_measure(
+        average_dict[k_success] = pe.compute_aggregated_measure(
                                   k_success, [val[k_success] for val in success_dict.values()])
     return average_dict
-
