@@ -1,7 +1,7 @@
-def med_function(word1, word2, show_matrix):
+def med_function(str1, str2, show_matrix):
 
-    rows = len(word1)+1 
-    cols = len(word2)+1
+    rows = len(str1)+1 
+    cols = len(str2)+1
 
     T = [
         [0 for x in range(cols)] 
