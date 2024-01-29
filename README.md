@@ -5,7 +5,7 @@ corpusfrom the WordNet dictionary where k = 1, 5, 10, the average success at k, 
 of textual data, serves as our setup, while the WordNet dictionary
 provides a reference for correct spellings</br></br>
 **Install and import Required Libiraries**
-  * pip install nltk multiprocessing time os itertools py_eval_terrier
+  * pip install nltk multiprocessing time os itertools matplotlib py_eval_terrier
   * import nltk 
   * import multiprocessing 
   * import py_eval_terrier
